@@ -1,7 +1,9 @@
+import { DraggableItem } from "./DraggableItem";
+
 export function MainPage() {
   return (
     <main>
-      <div>testing</div>
+      <DraggableItem />
     </main>
   );
 }
