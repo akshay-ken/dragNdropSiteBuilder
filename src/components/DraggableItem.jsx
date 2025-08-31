@@ -1,4 +1,9 @@
+import { useDraggable } from "@dnd-kit/react";
+
 export function DraggableItem() {
+  const { item1ref } = useDraggable({
+    id: "item1",
+  });
   return (
     <section className="bg-slate-800 h-1/3 absolute inset-x-0 bottom-0 p-4 flex flex-col gap-y-6 items-center">
       {/* draggable item one */}
@@ -10,7 +15,10 @@ export function DraggableItem() {
         </ul>
       </nav>
       {/* draggable item two */}
-      <button className="bg-slate-400 px-6 w-fit rounded-full text-xl md:text-2xl">
+      <button
+        className="bg-slate-400 px-6 w-fit rounded-full text-xl md:text-2xl"
+        ref={item1ref}
+      >
         Button
       </button>
       {/* draggable items three */}
